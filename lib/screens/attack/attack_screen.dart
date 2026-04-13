@@ -41,7 +41,7 @@ class AttackScreen extends StatelessWidget {
           children: [
             Text(
               'Leaving a battle in between huh? Got too hard',
-              style: Theme.of(context).textTheme.headline6,
+              style: Theme.of(context).textTheme.titleLarge,
               textAlign: TextAlign.center,
             ),
             const Spacer(),
@@ -55,7 +55,7 @@ class AttackScreen extends StatelessWidget {
             const Spacer(),
             Text(
               'You Serious ??',
-              style: Theme.of(context).textTheme.headline6,
+              style: Theme.of(context).textTheme.titleLarge,
               textAlign: TextAlign.center,
             ),
             TextButton(

@@ -27,11 +27,11 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget{
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // To make the Game fullscreen
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<Game>.value(
@@ -61,22 +61,21 @@ class MyApp extends StatelessWidget{
             theme: ThemeData.dark().copyWith(
               scaffoldBackgroundColor: Colors.black,
               primaryColor: Colors.indigo,
-              accentColor: Palette.deepBlue,
               textTheme: TextTheme(
-                headline4: TextStyle(fontSize: 28.sp, color: Colors.white),
-                bodyText2: TextStyle(fontSize: 12.sp, color: Colors.white),
-                headline5: TextStyle(fontSize: 18.sp, color: Colors.white),
-                headline6: TextStyle(fontSize: 16.sp, color: Colors.white),
-                button: TextStyle(
-                    fontSize: 10.sp,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white),
+                headlineMedium: TextStyle(fontSize: 28.sp, color: Colors.white),
+                bodyMedium: TextStyle(fontSize: 12.sp, color: Colors.white),
+                headlineSmall: TextStyle(fontSize: 18.sp, color: Colors.white),
+                titleLarge: TextStyle(fontSize: 16.sp, color: Colors.white),
+                // button: TextStyle(
+                //     fontSize: 10.sp,
+                //     fontWeight: FontWeight.bold,
+                //     color: Colors.white),
               ),
               iconTheme: IconThemeData(
                 color: Colors.white,
                 size: 18.sp,
               ),
-              tabBarTheme: TabBarTheme(
+              tabBarTheme: TabBarThemeData(
                 labelPadding: EdgeInsets.all(4.sp),
                 labelStyle:
                     TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w600),
@@ -94,6 +93,8 @@ class MyApp extends StatelessWidget{
                   ),
                 ),
               ),
+              colorScheme: ColorScheme.fromSwatch()
+                  .copyWith(secondary: Palette.deepBlue),
             ),
             home: SplashScreen(),
             routes: {

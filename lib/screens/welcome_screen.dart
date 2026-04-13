@@ -36,7 +36,7 @@ class WelcomeScreen extends StatelessWidget {
               'SPACE EMPIRES',
               style: Theme.of(context)
                   .textTheme
-                  .headline4!
+                  .headlineMedium!
                   .copyWith(fontFamily: 'Astral'),
             ),
             SizedBox(
@@ -50,7 +50,7 @@ class WelcomeScreen extends StatelessWidget {
                   'Play',
                   style: Theme.of(context)
                       .textTheme
-                      .headline4!
+                      .headlineMedium!
                       .copyWith(fontFamily: 'Italianno'),
                 )),
             TextButton(
@@ -64,7 +64,7 @@ class WelcomeScreen extends StatelessWidget {
                   'Story',
                   style: Theme.of(context)
                       .textTheme
-                      .headline4!
+                      .headlineMedium!
                       .copyWith(fontFamily: 'Italianno'),
                 )),
           ],

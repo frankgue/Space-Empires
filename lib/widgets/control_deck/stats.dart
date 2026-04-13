@@ -15,7 +15,7 @@ Future<void> showStatsMenu(BuildContext context) {
             'Stats',
             style: Theme.of(context)
                 .textTheme
-                .headline5!
+                .headlineSmall!
                 .copyWith(fontWeight: FontWeight.bold),
           ),
           const _ResourceAllocator(),
@@ -102,7 +102,7 @@ class _RivalsOpinion extends StatelessWidget {
       child: SingleChildScrollView(
         child: Text(
           _gameData.getRivalsOpinion(_player.ruler),
-          style: Theme.of(context).textTheme.headline6!.copyWith(
+          style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                 fontFamily: 'Italianno',
                 // fontWeight: FontWeight.w600
               ),

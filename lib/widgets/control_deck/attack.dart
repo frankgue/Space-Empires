@@ -24,7 +24,7 @@ Future<void> showAttackMenu(BuildContext context) {
           'Attack',
           style: Theme.of(context)
               .textTheme
-              .headline5!
+              .headlineSmall!
               .copyWith(fontWeight: FontWeight.bold),
         ),
         Expanded(child: LayoutBuilder(
@@ -186,7 +186,7 @@ class _MyForceCard extends StatelessWidget {
           Text(quantity.toString(),
               style: Theme.of(context)
                   .textTheme
-                  .headline6!
+                  .titleLarge!
                   .copyWith(fontWeight: FontWeight.bold))
         ],
       ),

@@ -253,7 +253,7 @@ class _RelationStatusBox extends StatelessWidget {
   Widget build(BuildContext context) {
     final _textStyle = Theme.of(context)
         .textTheme
-        .headline6!
+        .headlineSmall!
         .copyWith(fontWeight: FontWeight.bold, color: _getColor());
 
     return Expanded(

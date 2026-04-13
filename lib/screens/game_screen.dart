@@ -34,7 +34,7 @@ class GameScreen extends StatelessWidget {
             children: [
               Text(
                 'Silence sets in the universe.. as one of the big 4 ruler has decided to quit',
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
                 textAlign: TextAlign.center,
               ),
               const Spacer(),
@@ -47,7 +47,7 @@ class GameScreen extends StatelessWidget {
               const Spacer(),
               Text(
                 'You Serious ??',
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
                 textAlign: TextAlign.center,
               ),
               TextButton(
@@ -182,7 +182,7 @@ class __NextTurnFABState extends State<_NextTurnFAB>
                   opacity: 1 - _animation.value,
                   child: Text(
                     value,
-                    style: Theme.of(context).textTheme.headline5!.copyWith(
+                    style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                         color: Colors.green, fontWeight: FontWeight.bold),
                   ),
                 )),
@@ -236,7 +236,7 @@ class __NextTurnFABState extends State<_NextTurnFAB>
                         children: [
                           Text(
                             'This is it.. they are finally making a move',
-                            style: Theme.of(context).textTheme.headline6,
+                            style: Theme.of(context).textTheme.titleLarge,
                             textAlign: TextAlign.center,
                           ),
                           Expanded(child: Container()),
@@ -249,7 +249,7 @@ class __NextTurnFABState extends State<_NextTurnFAB>
                           Expanded(child: Container()),
                           Text(
                             'Get Ready to Fight !!',
-                            style: Theme.of(context).textTheme.headline6,
+                            style: Theme.of(context).textTheme.titleLarge,
                             textAlign: TextAlign.center,
                           ),
                           TextButton(

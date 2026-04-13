@@ -84,7 +84,7 @@ class AttackShipInfo extends StatelessWidget {
                 describeEnum(attackShip.type).inCaps,
                 style: Theme.of(context)
                     .textTheme
-                    .headline5!
+                    .headlineSmall!
                     .copyWith(fontWeight: FontWeight.bold),
               ),
               _ShipOverview(
@@ -112,7 +112,7 @@ class AttackShipInfo extends StatelessWidget {
                 describeEnum(attackShip.type).inCaps,
                   style: Theme.of(context)
                     .textTheme
-                    .headline5!
+                    .headlineSmall!
                     .copyWith(fontWeight: FontWeight.bold),
               ),
               _ShipOverview(
@@ -152,7 +152,7 @@ class _TransactionButton extends StatelessWidget {
         child: Text(text,
             style: Theme.of(context)
                 .textTheme
-                .headline6!
+                .headlineSmall!
                 .copyWith(fontWeight: FontWeight.bold)),
       ),
     ));
@@ -281,7 +281,7 @@ class _ShipOverview extends StatelessWidget {
                 child: Container(
                     alignment: Alignment.center,
                     child: Text(attackShip.description,
-                        style: Theme.of(context).textTheme.headline6!.copyWith(
+                        style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                               fontWeight: FontWeight.w600,
                               fontFamily: 'Italianno',
                             )))),
@@ -323,7 +323,7 @@ class _MilitaryDialogStatsBox extends StatelessWidget {
                             value,
                             style: Theme.of(context)
                                 .textTheme
-                                .headline6!
+                                .headlineSmall!
                                 .copyWith(fontWeight: FontWeight.bold),
                           ),
                         ),
@@ -335,7 +335,7 @@ class _MilitaryDialogStatsBox extends StatelessWidget {
                       value,
                       style: Theme.of(context)
                           .textTheme
-                          .headline6!
+                          .headlineSmall!
                           .copyWith(fontWeight: FontWeight.bold),
                     ),
                   );

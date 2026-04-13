@@ -14,7 +14,7 @@ Future<void> showGlobalNews(BuildContext context) {
           '༺ Global News ༻',
           style: Theme.of(context)
               .textTheme
-              .headline5!
+              .headlineSmall!
               .copyWith(fontFamily: 'Italianno', fontWeight: FontWeight.w600),
         ),
         const SizedBox(
@@ -33,7 +33,7 @@ Future<void> showGlobalNews(BuildContext context) {
                     news[index],
                     style: Theme.of(context)
                         .textTheme
-                        .bodyText2!
+                        .bodyMedium!
                         .copyWith(fontWeight: FontWeight.w600),
                   ),
                 );

@@ -53,7 +53,7 @@ class InfoScreen extends StatelessWidget {
             'Space Empires',
             style: Theme.of(context)
                 .textTheme
-                .headline6!
+                .titleLarge!
                 .copyWith(fontWeight: FontWeight.bold),
           ),
         ),
@@ -103,7 +103,7 @@ class InfoScreen extends StatelessWidget {
           child: SizedBox(
             width: 360.sp,
             child: ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: const Color(0xFF814FC1)),
+              style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF814FC1)),
               onPressed: () {
                 Navigator.pushReplacementNamed(
                     context, CharacterSelectionScreen.route);
@@ -124,7 +124,7 @@ class InfoScreen extends StatelessWidget {
                 Text('Instructions',
                     style: Theme.of(context)
                         .textTheme
-                        .headline4!
+                        .headlineMedium!
                         .copyWith(fontFamily: 'Italianno')),
               ],
             ),
@@ -170,7 +170,7 @@ class InfoScreen extends StatelessWidget {
                               '• A Space Themed Strategy game made in Flutter\n',
                               style: Theme.of(context)
                                   .textTheme
-                                  .bodyText2!
+                                  .bodyMedium!
                                   .copyWith(
                                       fontWeight: FontWeight.w600,
                                       fontSize: 14.sp),
@@ -179,7 +179,7 @@ class InfoScreen extends StatelessWidget {
                               '• The Game is in Development and open-souce',
                               style: Theme.of(context)
                                   .textTheme
-                                  .bodyText2!
+                                  .bodyMedium!
                                   .copyWith(
                                       fontWeight: FontWeight.w600,
                                       fontSize: 14.sp),
@@ -209,7 +209,7 @@ class InfoScreen extends StatelessWidget {
                               '• A Space Themed Strategy game made in Flutter\n',
                               style: Theme.of(context)
                                   .textTheme
-                                  .bodyText2!
+                                  .bodyMedium!
                                   .copyWith(
                                       fontWeight: FontWeight.w600,
                                       fontSize: 14.sp),
@@ -218,7 +218,7 @@ class InfoScreen extends StatelessWidget {
                               '• The Game is in Development and open-souce',
                               style: Theme.of(context)
                                   .textTheme
-                                  .bodyText2!
+                                  .bodyMedium!
                                   .copyWith(
                                       fontWeight: FontWeight.w600,
                                       fontSize: 14.sp),
@@ -253,7 +253,7 @@ class InfoScreen extends StatelessWidget {
               instruction,
               style: Theme.of(context)
                   .textTheme
-                  .headline6!
+                  .titleLarge!
                   .copyWith(fontWeight: FontWeight.bold),
             ),
             SizedBox(
@@ -266,7 +266,7 @@ class InfoScreen extends StatelessWidget {
                   kInstructionsData[instruction]!,
                   style: Theme.of(context)
                       .textTheme
-                      .bodyText2!
+                      .bodyMedium!
                       .copyWith(fontWeight: FontWeight.w600, fontSize: 14.sp),
                 ),
               ),

@@ -90,7 +90,7 @@ class PlanetScreen extends StatelessWidget {
               .descriptionForPlanet(_planetName),
           style: Theme.of(context)
               .textTheme
-              .headline6!
+              .titleLarge!
               .copyWith(fontWeight: FontWeight.w600),
           textAlign: TextAlign.center,
         ),
@@ -127,7 +127,7 @@ class PlanetScreen extends StatelessWidget {
                     '${player!.money}',
                     style: Theme.of(context)
                         .textTheme
-                        .bodyText2!
+                        .bodyMedium!
                         .copyWith(fontWeight: FontWeight.bold),
                   );
                 },

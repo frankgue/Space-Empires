@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
+// import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 
@@ -181,12 +181,12 @@ Future<void> _showDefenseDetails(
   final Orientation orientation = (size.width / size.height > 1.7)
       ? Orientation.landscape
       : Orientation.portrait;
-  return showAnimatedDialog(
+  return showDialog(
       context: context,
-      animationType: DialogTransitionType.size,
+      // animationType: DialogTransitionType.size,
       barrierDismissible: true,
-      curve: Curves.fastOutSlowIn,
-      duration: const Duration(seconds: 1),
+      // curve: Curves.fastOutSlowIn,
+      // duration: const Duration(seconds: 1),
       builder: (BuildContext context) {
         return Material(
           type: MaterialType.transparency,
@@ -207,7 +207,7 @@ Future<void> _showDefenseDetails(
                 children: [
                   Text(
                     describeEnum(defenseShip.type).inCaps,
-                    style: Theme.of(context).textTheme.headline5!.copyWith(
+                    style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
                   Expanded(
@@ -272,7 +272,7 @@ class _DefenseDialogStatsBox extends StatelessWidget {
                       child: Text(value,
                           style: Theme.of(context)
                               .textTheme
-                              .headline6!
+                              .titleLarge!
                               .copyWith(fontWeight: FontWeight.bold)),
                     ),
                   ],
@@ -282,7 +282,7 @@ class _DefenseDialogStatsBox extends StatelessWidget {
                   child: Text(value,
                       style: Theme.of(context)
                           .textTheme
-                          .headline6!
+                          .titleLarge!
                           .copyWith(fontWeight: FontWeight.bold)),
                 );
         }),

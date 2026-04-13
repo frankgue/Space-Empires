@@ -40,7 +40,7 @@ class CharacterSelectionScreen extends StatelessWidget {
           child: Text('Choose Character',
               style: Theme.of(context)
                   .textTheme
-                  .headline4!
+                  .headlineMedium!
                   .copyWith(fontFamily: 'Italianno')),
         ),
       );
@@ -105,7 +105,7 @@ class CharacterSelectionScreen extends StatelessWidget {
           child: Text(describeEnum(ruler).inCaps,
               style: Theme.of(context)
                   .textTheme
-                  .headline5!
+                  .headlineSmall!
                   .copyWith(fontWeight: FontWeight.bold)),
         ),
       );

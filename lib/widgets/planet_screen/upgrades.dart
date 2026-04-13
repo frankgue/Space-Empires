@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
+// import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 
@@ -111,12 +111,12 @@ Future _showUpgradeDetails(
       ? Orientation.landscape
       : Orientation.portrait;
 
-  return showAnimatedDialog(
+  return showDialog(
       context: context,
-      animationType: DialogTransitionType.size,
-      barrierDismissible: true,
-      curve: Curves.fastOutSlowIn,
-      duration: const Duration(seconds: 1),
+      // animationType: DialogTransitionType.size,
+      // barrierDismissible: true,
+      // curve: Curves.fastOutSlowIn,
+      // duration: const Duration(seconds: 1),
       builder: (BuildContext context) {
         return Material(
           type: MaterialType.transparency,
@@ -137,7 +137,7 @@ Future _showUpgradeDetails(
                 children: [
                   Text(
                     describeEnum(upgrade.type).inCaps,
-                    style: Theme.of(context).textTheme.headline5!.copyWith(
+                    style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
                   Expanded(
@@ -206,7 +206,7 @@ class _UpgradeDialogStatsBox extends StatelessWidget {
                       child: Text(value,
                           style: Theme.of(context)
                               .textTheme
-                              .headline6!
+                              .headlineSmall!
                               .copyWith(fontWeight: FontWeight.bold)),
                     ),
                   ],
@@ -216,7 +216,7 @@ class _UpgradeDialogStatsBox extends StatelessWidget {
                   child: Text(value,
                       style: Theme.of(context)
                           .textTheme
-                          .headline6!
+                          .headlineSmall!
                           .copyWith(fontWeight: FontWeight.bold)),
                 );
         }),

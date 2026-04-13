@@ -85,7 +85,7 @@ class _StoryScreenIIIState extends State<StoryScreenIII> {
         animatedTexts: List.generate(
             _dialogueList.length,
             (index) => FadeAnimatedText(_dialogueList[index],
-                textStyle: Theme.of(context).textTheme.headline6,
+                textStyle: Theme.of(context).textTheme.titleLarge,
                 textAlign: TextAlign.center)),
         totalRepeatCount: 0,
         isRepeatingAnimation: false,

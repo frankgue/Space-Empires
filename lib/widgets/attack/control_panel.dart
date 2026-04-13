@@ -1,6 +1,7 @@
 import 'dart:math';
 
-import 'package:carousel_slider/carousel_slider.dart';
+// import 'package:carousel_slider/carousel_slider.dart' as slider;
+import 'package:carousel_slider/carousel_slider.dart' as cs;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
@@ -27,7 +28,8 @@ class _ControlPanelState extends State<ControlPanel>
   final _attackButtonKey = GlobalKey();
   late AnimationController _animationController;
   late Animation<double> _animation;
-  CarouselController formationCarouselController = CarouselController();
+  final cs.CarouselSliderController formationCarouselController =
+      cs.CarouselSliderController();
   @override
   void initState() {
     super.initState();
@@ -68,13 +70,21 @@ class _ControlPanelState extends State<ControlPanel>
                     children: [
                       Text(
                         attackPoint,
-                        style: Theme.of(context).textTheme.headline5!.copyWith(
-                            color: Colors.lime, fontWeight: FontWeight.bold),
+                        style: Theme.of(context)
+                            .textTheme
+                            .headlineSmall!
+                            .copyWith(
+                                color: Colors.lime,
+                                fontWeight: FontWeight.bold),
                       ),
                       Text(
                         defensePoint,
-                        style: Theme.of(context).textTheme.headline5!.copyWith(
-                            color: Colors.lime, fontWeight: FontWeight.bold),
+                        style: Theme.of(context)
+                            .textTheme
+                            .headlineSmall!
+                            .copyWith(
+                                color: Colors.lime,
+                                fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
@@ -210,7 +220,7 @@ class _ControlPanelState extends State<ControlPanel>
                               '${_planet.defensePoints}',
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline3!
+                                  .displaySmall!
                                   .copyWith(
                                     color: Colors.white70,
                                     fontWeight: FontWeight.w600,
@@ -225,7 +235,7 @@ class _ControlPanelState extends State<ControlPanel>
                             'Defense',
                             style: Theme.of(context)
                                 .textTheme
-                                .headline6!
+                                .titleLarge!
                                 .copyWith(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w600),
@@ -242,7 +252,7 @@ class _ControlPanelState extends State<ControlPanel>
                         child: Stack(
                           children: [
                             Center(
-                              child: CarouselSlider(
+                              child: cs.CarouselSlider(
                                 carouselController: formationCarouselController,
                                 items: List.generate(
                                   pow(kAttackShipsData.length,
@@ -253,7 +263,7 @@ class _ControlPanelState extends State<ControlPanel>
                                         '${index + 1}',
                                         style: Theme.of(context)
                                             .textTheme
-                                            .headline3!
+                                            .displaySmall!
                                             .copyWith(
                                               color: Colors.white70,
                                               fontWeight: FontWeight.w600,
@@ -262,7 +272,7 @@ class _ControlPanelState extends State<ControlPanel>
                                     ),
                                   ),
                                 ),
-                                options: CarouselOptions(
+                                options: cs.CarouselOptions(
                                   onPageChanged: (index, _) {
                                     _formationProvider.changeFormation(index);
                                   },
@@ -303,7 +313,7 @@ class _ControlPanelState extends State<ControlPanel>
                             'Formation',
                             style: Theme.of(context)
                                 .textTheme
-                                .headline6!
+                                .titleLarge!
                                 .copyWith(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w600),
@@ -396,7 +406,7 @@ class _ControlPanelState extends State<ControlPanel>
                   child: FittedBox(
                     child: Text(
                       'A T T A C K',
-                      style: Theme.of(context).textTheme.headline6!.copyWith(
+                      style: Theme.of(context).textTheme.titleLarge!.copyWith(
                           color: Colors.white70, fontWeight: FontWeight.w800),
                     ),
                   ),

@@ -47,7 +47,7 @@ class AttackConclusionScreen extends StatelessWidget {
             FadeAnimatedText(message,
                 textStyle: Theme.of(context)
                     .textTheme
-                    .headline5!
+                    .titleLarge!
                     .copyWith(fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center)
           ],
