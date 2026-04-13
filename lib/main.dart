@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'package:rive/rive.dart';
 import 'package:sizer/sizer.dart';
 
 import './screens/character_selection_screen.dart';
@@ -23,7 +24,12 @@ import 'services/planet/planet.dart';
 import 'services/player/player.dart';
 import 'utility/constants.dart';
 
-void main() {
+Future<void> main() async {
+  // 1. Indispensable pour les appels asynchrones avant runApp
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // 2. Initialise le moteur Rive (indispensable pour le Web)
+  await RiveFile.initialize();
   runApp(MyApp());
 }
 
